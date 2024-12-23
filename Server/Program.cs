@@ -14,9 +14,10 @@ namespace Server
         public static List<User> Users = new List<User>();
         public static IPAddress IPAddress;
         public static int Port;
-        static void Main(string[] args)
+        static void Main()
         {
-            Users.Add(new User("Ksenich", "Ksenich", @"C:\Ksenich"));
+            Console.WriteLine("Вы находитесь на сервере.");
+            Users.Add(new User("Ksenich", "Ksenich", @"C:\Users\User\Desktop"));
             Console.Write("Введите IP адрес сервера: ");
             string sIpAdress = Console.ReadLine();
             Console.Write("Введите порт: ");
@@ -52,6 +53,7 @@ namespace Server
                 foreach (string file in files)
                 {
                     string NameFile = file.Replace(Src, "");
+                    FoldersFiles.Add(NameFile);
                 }
             }
             return FoldersFiles;
@@ -84,13 +86,13 @@ namespace Server
                     {
                         ViewModelMessage viewModelMessage;
                         string[] DataCommand = viewModelSend.Message.Split(new string[1] { " " }, StringSplitOptions.None);
-                        if (DataCommand[1] == "connect")
+                        if (DataCommand[0] == "connect")
                         {
                             string[] DataMessage = viewModelSend.Message.Split(new string[1] { " " }, StringSplitOptions.None);
                             if (AutorizationUser(DataMessage[1], DataMessage[2]))
                             {
                                 int IdUser = Users.FindIndex(x => x.Login == DataMessage[1] && x.Password == DataMessage[2]);
-                                viewModelMessage = new ViewModelMessage("authorization", IdUser.ToString());
+                                viewModelMessage = new ViewModelMessage("autorization", IdUser.ToString());
                             }
                             else
                             {
