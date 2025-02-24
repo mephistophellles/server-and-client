@@ -4,10 +4,12 @@
     {
         public string Command { get; set; }
         public string Data { get; set; }
-        public ViewModelMessage(string command, string data)
+        public int UserId { get; set; }
+        public ViewModelMessage(string Command, string Data, int userId)
         {
-            Command = command;
-            Data = data;
+            this.Command = Command;
+            this.Data = Data;
+            UserId = userId;
         }
     }
 }

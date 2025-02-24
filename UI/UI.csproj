@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="MediaSource\dark-ui.jpg" />
+    <None Remove="MediaSource\documents.png" />
+    <None Remove="MediaSource\open-folder.png" />
+    <None Remove="MediaSource\return.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common1\Common1.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="MediaSource\dark-ui.jpg" />
+    <Resource Include="MediaSource\documents.png" />
+    <Resource Include="MediaSource\open-folder.png" />
+    <Resource Include="MediaSource\return.png" />
+  </ItemGroup>
+
+</Project>
