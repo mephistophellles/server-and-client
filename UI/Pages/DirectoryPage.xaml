@@ -11,16 +11,6 @@
     <Grid Background="#F5F5F5">
         <Grid VerticalAlignment="Top" Margin="10,10,10,0" Background="#E0E0E0">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-                <Border CornerRadius="10" Background="#FF007ACC" Margin="10,5,0,5" Height="40" Width="130" >
-                    <Button Content="Назад"
-                        FontSize="16" 
-                        FontWeight="Bold"
-                        Background="Transparent"
-                        Foreground="White" 
-                        BorderThickness="0"
-                        Click="back"
-                        Cursor="Hand"/>
-                </Border>
                 <Border CornerRadius="10" Background="#FF007ACC" Margin="10,5,0,5" Height="40" Width="130">
                     <Button x:Name="downloadBtn" Content="Загрузить"
                         FontSize="16" 
@@ -35,7 +25,9 @@
         </Grid>
 
         <Grid Margin="10,78,10,10" Background="#FFFFFF">
-            <ListBox x:Name="list" Margin="20,60,20,60" Background="#F0F0F0" BorderThickness="0" MouseDoubleClick="openFolds"/>
+            <ScrollViewer >
+                <StackPanel x:Name="stackPanelDirectories" Orientation="Vertical"></StackPanel>
+            </ScrollViewer>
         </Grid>
     </Grid>
 

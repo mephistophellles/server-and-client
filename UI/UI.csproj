@@ -7,10 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="MediaSource\arrow.png" />
     <None Remove="MediaSource\dark-ui.jpg" />
+    <None Remove="MediaSource\directory.png" />
     <None Remove="MediaSource\documents.png" />
+    <None Remove="MediaSource\file.png" />
     <None Remove="MediaSource\open-folder.png" />
     <None Remove="MediaSource\return.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="MediaSource\arrow.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,7 +31,9 @@
 
   <ItemGroup>
     <Resource Include="MediaSource\dark-ui.jpg" />
+    <Resource Include="MediaSource\directory.png" />
     <Resource Include="MediaSource\documents.png" />
+    <Resource Include="MediaSource\file.png" />
     <Resource Include="MediaSource\open-folder.png" />
     <Resource Include="MediaSource\return.png" />
   </ItemGroup>
